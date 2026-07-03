@@ -2,7 +2,7 @@
 
 A beginner-friendly data analysis project exploring one year (2025) of e-commerce sales data across five Nigerian regions. Built entirely with **SQL** and **Excel** — no extra tools or libraries — to demonstrate core data analysis fundamentals.
 
-## 📌 Project Overview
+# Project Overview
 
 This project analyzes 600 sales transactions to answer common business questions:
 - Which regions and product categories drive the most revenue?
@@ -10,12 +10,12 @@ This project analyzes 600 sales transactions to answer common business questions
 - Who are the highest-value customers?
 - What payment methods do customers prefer?
 
-## 🛠️ Tools Used
+# Tools Used
 
-- **Excel** — data cleaning, pivot-style summary tables, charts, KPI dashboard
-- **SQL (SQLite syntax, works in any standard SQL engine)** — 10 business analysis queries
+- Excel — data cleaning, pivot-style summary tables, charts, KPI dashboard
+- SQL — 10 business analysis queries
 
-## 📁 Project Structure
+# Project Structure
 
 ```
 sales-data-analysis/
@@ -26,7 +26,7 @@ sales-data-analysis/
 └── README.md
 ```
 
-## 📊 Dataset
+# Dataset
 
 `data/sales_data.csv` contains 600 orders with the following fields:
 
@@ -43,16 +43,16 @@ sales-data-analysis/
 | TotalSale | Quantity × UnitPrice (₦) |
 | PaymentMethod | Card, Bank Transfer, Cash on Delivery, or USSD |
 
-## 📈 Excel Workbook
+# Excel Workbook
 
 `sales_data_analysis.xlsx` has three sheets:
-1. **Raw Data** — the full, cleaned dataset
-2. **Summary & Insights** — KPI dashboard (total revenue, orders, average order value) plus summary tables and charts for revenue by region, revenue by category, and the monthly revenue trend
-3. **Key Findings** — a written summary of the business insights uncovered
+1. Raw Data — the full, cleaned dataset
+2. Summary & Insights  — KPI dashboard (total revenue, orders, average order value) plus summary tables and charts for revenue by region, revenue by category, and the monthly revenue trend
+3. Key Findings — a written summary of the business insights uncovered
 
 All summary figures are built with live Excel formulas (`SUMIF`, `COUNTIF`, `SUMPRODUCT`), so they recalculate automatically if the raw data changes.
 
-## 🗄️ SQL Analysis
+# SQL Analysis
 
 `sql_queries.sql` contains 10 queries, including:
 1. Total revenue and order overview
@@ -66,9 +66,9 @@ All summary figures are built with live Excel formulas (`SUMIF`, `COUNTIF`, `SUM
 9. Category performance by region
 10. High-value orders above the average
 
-**To run these queries yourself:** import `data/sales_data.csv` into any SQL tool (SQLite, MySQL Workbench, or even Excel's Power Query) as a table named `sales`, then run the queries in `sql_queries.sql`.
+**To run these queries:** import `data/sales_data.csv` into any SQL tool (SQLite, MySQL Workbench, or even Excel's Power Query) as a table named `sales`, then run the queries in `sql_queries.sql`.
 
-## 🔍 Key Business Insights
+# Key Business Insights
 
 - **Lagos leads all regions** in both order volume and total revenue.
 - **Electronics is the top revenue category**, driven mainly by Laptop and Smartphone sales, even though Fashion has more individual orders.
@@ -76,6 +76,6 @@ All summary figures are built with live Excel formulas (`SUMIF`, `COUNTIF`, `SUM
 - **Card and USSD payments** together make up over half of all orders, showing a strong customer preference for digital payment over cash on delivery.
 - **A small group of repeat customers** account for a disproportionate share of total revenue, pointing to an opportunity for a loyalty program.
 
-## 👤 About
+# About
 
-This project was built as a portfolio piece to demonstrate practical SQL and Excel data analysis skills for entry-level / assistant data analyst roles.
+This project was built as a portfolio piece to demonstrate practical SQL and Excel data analysis skills.
