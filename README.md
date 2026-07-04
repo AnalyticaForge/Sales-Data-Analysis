@@ -1,41 +1,37 @@
 # Sales Data Analysis
 
-A beginner-friendly data analysis project exploring one year (2025) of e-commerce sales data across five Nigerian regions. Built entirely with **SQL** and **Excel** — no extra tools or libraries — to demonstrate core data analysis fundamentals.
+I built this project to practice core data analysis fundamentals with SQL and Excel before applying for entry-level / assistant data analyst roles. It looks at a year (2025) of e-commerce sales activity across six areas of Lagos.
 
-# Project Overview
+## Why I built it this way
 
-This project analyzes 600 sales transactions to answer common business questions:
-- Which regions and product categories drive the most revenue?
-- How do sales trend across the year?
-- Who are the highest-value customers?
-- What payment methods do customers prefer?
+I deliberately kept this to just SQL and Excel, no Python, no extra libraries, to show I can handle the fundamentals cleanly before reaching for more tooling.
 
-# Tools Used
+## Tools Used
 
-- Excel — data cleaning, pivot-style summary tables, charts, KPI dashboard
-- SQL — 10 business analysis queries
+- **Excel** — data cleaning, summary tables, KPI dashboard, charts
+- **SQL (SQLite syntax)** — 11 queries covering the business questions I'd actually want answered
 
-# Project Structure
+## Project Structure
 
 ```
 sales-data-analysis/
 ├── data/
 │   └── sales_data.csv          # Raw dataset (600 records)
-├── sales_data_analysis.xlsx    # Excel workbook: raw data, summary dashboard, charts, findings
-├── sql_queries.sql             # 10 SQL queries covering key business questions
+├── sales_data_analysis.xlsx    # Excel workbook: raw data, dashboard, charts, findings
+├── sql_queries.sql             # 11 SQL queries
 └── README.md
 ```
 
-# Dataset
+## About the Data
 
-`data/sales_data.csv` contains 600 orders with the following fields:
+`data/sales_data.csv` is a self-generated dataset built for practice purposes — not real company data. It has 600 orders with the following fields:
 
 | Column | Description |
 |---|---|
 | OrderID | Unique order identifier |
 | OrderDate | Date of purchase (YYYY-MM-DD) |
 | CustomerName | Customer placing the order |
-| Region | Lagos, Abuja, Port Harcourt, Ibadan, or Kano |
+| Area | Lagos area: Ikeja, Lekki, Surulere, Ikorodu, Yaba, or Ajah |
 | Category | Electronics, Fashion, Home & Living, or Beauty |
 | Product | Specific product purchased |
 | Quantity | Units purchased |
@@ -43,39 +39,30 @@ sales-data-analysis/
 | TotalSale | Quantity × UnitPrice (₦) |
 | PaymentMethod | Card, Bank Transfer, Cash on Delivery, or USSD |
 
-# Excel Workbook
+## Excel Workbook
 
 `sales_data_analysis.xlsx` has three sheets:
-1. Raw Data — the full, cleaned dataset
-2. Summary & Insights  — KPI dashboard (total revenue, orders, average order value) plus summary tables and charts for revenue by region, revenue by category, and the monthly revenue trend
-3. Key Findings — a written summary of the business insights uncovered
+1. **Raw Data** — the full dataset, frozen header row for easy scrolling
+2. **Summary & Insights** — KPI dashboard (total revenue, orders, average order value) plus summary tables and charts for revenue by area, revenue by category, and the monthly revenue trend
+3. **Key Findings** — my own read on what the numbers are showing
 
-All summary figures are built with live Excel formulas (`SUMIF`, `COUNTIF`, `SUMPRODUCT`), so they recalculate automatically if the raw data changes.
+Every summary figure is a live formula (`SUMIF`, `COUNTIF`, `SUMPRODUCT`), so the dashboard updates itself if the raw data changes — nothing is hardcoded.
 
-# SQL Analysis
+## SQL Analysis
 
-`sql_queries.sql` contains 10 queries, including:
-1. Total revenue and order overview
-2. Revenue by region
-3. Revenue by product category
-4. Top 10 best-selling products
-5. Monthly sales trend
-6. Average order value by region
-7. Top 10 customers by spend
-8. Payment method breakdown
-9. Category performance by region
-10. High-value orders above the average
+`sql_queries.sql` has 11 queries. The first 10 cover the standard questions (revenue by area, top products, monthly trend, top customers, payment breakdown, etc.). The 11th is one I wanted to check myself: whether customers paying by card or transfer tend to spend more per order than those paying cash on delivery or USSD.
 
-**To run these queries:** import `data/sales_data.csv` into any SQL tool (SQLite, MySQL Workbench, or even Excel's Power Query) as a table named `sales`, then run the queries in `sql_queries.sql`.
+**To run these yourself:** import `data/sales_data.csv` into any SQL tool (SQLite, MySQL Workbench, or Excel's Power Query) as a table named `sales`, then run the queries in `sql_queries.sql`.
 
-# Key Business Insights
+## What I Found
 
-- **Lagos leads all regions** in both order volume and total revenue.
-- **Electronics is the top revenue category**, driven mainly by Laptop and Smartphone sales, even though Fashion has more individual orders.
-- **Kano has the highest average order value**, suggesting fewer but higher-ticket purchases.
-- **Card and USSD payments** together make up over half of all orders, showing a strong customer preference for digital payment over cash on delivery.
-- **A small group of repeat customers** account for a disproportionate share of total revenue, pointing to an opportunity for a loyalty program.
+- **Ikeja and Lekki bring in the most revenue by far** — the busiest, most commercial areas in the dataset, so this tracks.
+- **Electronics is the top revenue category**, even though Fashion has more individual orders — a few expensive laptops and phones outweigh a lot of cheaper items.
+- **Ajah has fewer orders than anywhere else, but its average order value holds up** — worth watching if that area grows.
+- **Revenue moves up and down month to month** rather than trending steadily — in a real business I'd want to line this up against promo dates or seasonal events to explain the spikes.
+- **Card and USSD together make up over half of all orders**, so checkout needs to work flawlessly for those two first.
+- **A small group of customers place way more orders than everyone else** — worth a loyalty perk or a personal follow-up, since they're already proving they'll buy again.
 
-# About
+## About
 
-This project was built as a portfolio piece to demonstrate practical SQL and Excel data analysis skills.
+Built by Abraham — [github.com/Spiritual-Dev](https://github.com/Spiritual-Dev)
