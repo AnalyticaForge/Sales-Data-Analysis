@@ -1,6 +1,6 @@
 /* =========================================================
    SALES DATA ANALYSIS -- SQL QUERIES
-   Author: Abraham (github.com/Spiritual-Dev)
+   Author: Abraham (github.com/AnalyticaForge)
 
    Dataset: data/sales_data.csv -> import as table `sales`
    Tool: SQLite syntax, but these run fine in MySQL/Postgres too
